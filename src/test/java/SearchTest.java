@@ -8,10 +8,11 @@ public class SearchTest {
     void SelenideSearchTest(){
         //открыть страницу Гугла
         open("https://google.com");
-        //Ввыести selenide в поисквоую строку
+        //Ввести selenide в поисквоую строку
         $("[name=q]").setValue("Selenide").pressEnter();
         //sleep(5000);
         //Проверить что selenide появилось в результатах поиска
         $("[id=search]").shouldHave(text("selenide.org"));
     }
 }
+
